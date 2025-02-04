@@ -44,6 +44,7 @@ OpenVPN сервер на Ubuntu VPS
 - [git clone https://github.com/yourusername/openvpn-setup.git]
 - [cd openvpn-setup]
 - [sudo bash install.sh]
+- [sudo bash firewall/ufw-rules.sh]
 2. Добавляем клиента
 - [sudo bash scripts/add-client.sh myclient]
 - Файл myclient.ovpn будет создан в /etc/openvpn/clients/
