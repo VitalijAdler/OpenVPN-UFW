@@ -8,8 +8,8 @@ ufw allow 2222/tcp
 ufw allow OpenSSH
 
 # Включаем IP-форвардинг
-echo "net.ipv4.ip_forward=1" > /etc/sysctl.d/99-openvpn.conf
-sysctl --system
+echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
+sysctl -p
 
 # Добавляем маскарадинг NAT в /etc/ufw/before.rules, если он ещё не добавлен
 UFW_RULES="/etc/ufw/before.rules"
