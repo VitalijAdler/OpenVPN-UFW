@@ -26,7 +26,7 @@ OpenVPN сервер на Ubuntu VPS
 ## Установка OpenSSH-сервера
 
 1. Проверьте файл конфигурации SSH:
-- Откройте файл конфигурации SSH-сервера:[sudo nano /etc/ssh/sshd_config]
+- Откройте файл конфигурации SSH-сервера:[ sudo nano /etc/ssh/sshd_config ]
 - Запрет root-доступа: Найдите строку PermitRootLogin yes и измените её на PermitRootLogin no
 - Убедитесь, что в файле есть строка: Port 2222
 - Проверьте, что строка не закомментирована (без символа # в начале).
@@ -34,18 +34,18 @@ OpenVPN сервер на Ubuntu VPS
 
 2. Перезапустите SSH-сервис:
 - После изменения конфигурации перезапустите SSH-сервер
-- [sudo systemctl restart sshd]
+- [ sudo systemctl restart sshd ]
 
-3. Подключение к серверу будет иметь вид: [ssh -p 2222 user_name@IP]
+3. Подключение к серверу будет иметь вид: [ ssh -p 2222 user_name@IP ]
 
 ## ⚙️ Установка
 
 1. Клонируем и устанавливаем
-- [git clone https://github.com/yourusername/openvpn-setup.git]
-- [cd openvpn-setup]
-- [sudo bash install.sh]
+- [ git clone https://github.com/VitalijAdler/OpenVPN-UFW.git ]
+- [ cd openvpn-setup]
+- [ sudo bash install.sh]
 2. Добавляем клиента
-- [sudo bash scripts/add-client.sh myclient]
+- [ sudo bash scripts/add-client.sh myclient]
 - Файл myclient.ovpn будет создан в /etc/openvpn/clients/
 
 3. Удаляем клиента ( если есть необходимость в ограничении доступа к серверу)
